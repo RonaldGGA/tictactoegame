@@ -94,7 +94,7 @@ const App: React.FC = () => {
           )
         )}
       </div>
-      <div>
+      <div className="results">
         {end && winner ? <p>Winner is {winner}</p> : null}
         {end && !winner ? <p>It's a draw!</p> : null}
       </div>
