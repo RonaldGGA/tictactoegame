@@ -83,13 +83,13 @@ const App: React.FC = () => {
       <h1>Tic-Tac-Toe Game</h1>
       <div className="board">
         {["id1", "id2", "id3", "id4", "id5", "id6", "id7", "id8", "id9"].map(
-          (cellId) => (
+          (cellId: string) => (
             <div
               key={cellId}
               className="cell"
               id={cellId}
               onClick={handleClick}>
-              {ids[cellId]}
+              {ids[cellId as keyof idsProps]}
             </div>
           )
         )}
